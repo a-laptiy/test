@@ -1,0 +1,82 @@
+$title-border-size: 38px;
+$title-border-size-md: 46px;
+
+.grids-block {
+  padding-top: 60px;
+  background-color: $bg-gray-light;
+
+  @include breakpoint(md) {
+    padding-top: 120px;
+    padding-bottom: 26px;
+  }
+
+  &__head {
+    position: relative;
+    margin-bottom: 60px;
+    padding-top: $title-border-size;
+    padding-right: $title-border-size;
+    color: $text-blue;
+    text-align: right;
+    line-height: 1;
+    font-size: 30px;
+
+    @include breakpoint(md) {
+      margin-bottom: 80px;
+      padding-top: $title-border-size-md;
+      padding-right: $title-border-size-md;
+      font-size: 45px;
+    }
+
+    @include breakpoint(lg) {
+      font-size: 60px;
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: $title-border-size;
+      height: $title-border-size;
+      border: solid $border-orange;
+      border-width: 8px 8px 0 0;
+
+      @include breakpoint(md) {
+        width: $title-border-size-md;
+        height: $title-border-size-md;
+        border-width: 12px 12px 0 0;
+      }
+    }
+  }
+
+  &__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__item {
+    margin-bottom: 40px;
+    padding: 0 24px;
+
+    @include breakpoint(md) {
+      margin-bottom: 64px;
+    }
+  }
+
+  &__image {
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: center;
+
+    img {
+      max-width: 100%;
+    }
+  }
+
+  &__item-title {
+    font-size: 20px;
+    margin-bottom: 5px;
+    color: $text-blue;
+    text-transform: uppercase;
+  }
+}

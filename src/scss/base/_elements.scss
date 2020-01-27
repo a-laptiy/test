@@ -1,0 +1,42 @@
+/* ==========================================================================
+  Base styles
+========================================================================== */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: $body-font;
+  font-size: $main-font-size;
+  line-height: $main-line-height;
+  color: $text-gray;
+}
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video,
+object,
+input,
+textarea {
+  max-width: 100%;
+  vertical-align: middle;
+}
+
+img {
+  height: auto;
+}
+
+textarea {
+  resize: vertical;
+}
+
+button,
+input[type='submit'] {
+  cursor: pointer;
+}
