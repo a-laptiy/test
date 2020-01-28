@@ -1,0 +1,42 @@
+.numbers-block {
+  padding: 60px 0;
+  color: $text-blue;
+  text-align: center;
+  font-weight: 700;
+
+  @include breakpoint(md) {
+    padding: 135px 0;
+  }
+
+  &__item {
+    margin-bottom: 30px;
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+  
+    @include breakpoint(md) {
+      margin-bottom: 0;
+      padding: 0 20px;
+    }
+
+    @include breakpoint(lg) {
+      padding: 0 40px;
+    }
+  }
+
+  &__number {
+    font-size: 40px;
+    line-height: 1;
+    margin-bottom: 20px;
+    white-space: nowrap;
+
+    @include breakpoint(lg) {
+      font-size: 60px;
+    }
+  }
+
+  &__subtitle {
+    font-size: 14px;
+  }
+}

@@ -1,0 +1,32 @@
+.container {
+  @include container;
+}
+
+.container-md {
+  @include container-md;
+}
+
+.container-lg {
+  @include container-lg;
+}
+
+.container-xl {
+  @include container-xl;
+}
+
+@each $breakpoint, $variant in $responsive-variants {
+  @include breakpoint($breakpoint) {
+    .col#{$variant}-1 { width: ( 1 / 12 * 100%); }
+    .col#{$variant}-2 { width: ( 2 / 12 * 100%); }
+    .col#{$variant}-3 { width: ( 3 / 12 * 100%); }
+    .col#{$variant}-4 { width: ( 4 / 12 * 100%); }
+    .col#{$variant}-5 { width: ( 5 / 12 * 100%); }
+    .col#{$variant}-6 { width: ( 6 / 12 * 100%); }
+    .col#{$variant}-7 { width: ( 7 / 12 * 100%); }
+    .col#{$variant}-8 { width: ( 8 / 12 * 100%); }
+    .col#{$variant}-9 { width: ( 9 / 12 * 100%); }
+    .col#{$variant}-10 { width: ( 10 / 12 * 100%); }
+    .col#{$variant}-11 { width: ( 11 / 12 * 100%); }
+    .col#{$variant}-12 { width: 100%; }
+  }
+}

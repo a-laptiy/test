@@ -1,0 +1,138 @@
+.hero-silder {
+	position: relative;
+	width: 100%;
+	height: 100vh;
+	background: url('../assets/images/slide.png') center/cover no-repeat;
+	// clip-path: polygon(0 0, 100% 0, 100% 76%, 50% 100%, 0% 76%);
+
+	&__content {
+		color: $text-white;
+	}
+
+	&__main {
+		padding-right: 30px;
+
+		@include breakpoint(md) {
+			padding-right: 0;
+		}
+	}
+
+	&__image {
+		margin-bottom: 30px;
+
+		@include breakpoint(md) {
+			margin-bottom: 0;
+		}
+
+		img {
+			max-height: 100px;
+
+			@include breakpoint(md) {
+				max-height: auto;
+			}
+		}
+	}
+
+	&__title {
+		margin-bottom: 10px;
+		font-size: 30px;
+		line-height: 1;
+
+		@include breakpoint(md) {
+			font-size: 55px;
+		}
+	}
+
+	&__text {
+		margin-bottom: 50px;
+		font-size: 16px;
+		font-weight: 600;
+	}
+
+	&__scroll-to {
+		position: absolute;
+		left: 50%;
+		bottom: 20px;
+		text-decoration: none;
+		transform: translateX(-50%);
+		z-index: 5;
+
+		@include breakpoint(md) {
+			bottom: 50px;
+		}
+	}
+
+	&__scroll-to-text {
+		margin-bottom: 6px;
+		color: $text-white;
+		text-transform: uppercase;
+		font-size: 16px;
+		font-weight: 700;
+		pointer-events: none;
+
+		@include breakpoint(md) {
+			margin-bottom: 25px;
+			font-size: 26px;
+		}
+	}
+
+	&__scroll-to-figure {
+		position: relative;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		pointer-events: none;
+	}
+
+	&__scroll-to-hexagon {
+		width: 40px;
+		height: 46px;
+		background: url('../assets/images/hexagon-big.png') center/cover no-repeat;
+
+		@include breakpoint(md) {
+			width: 61px;
+			height: 70px;
+		}
+	}
+
+	&__scroll-to-arrow {
+		position: absolute;
+		margin-left: 1px;
+		width: 21px;
+		height: 10px;
+		background: url('../assets/images/down-arrow.png') center/cover no-repeat;
+		transform: translate(-50%, -50%);
+		animation: bounce 3s infinite;
+
+		@include breakpoint(md) {
+			width: 32px;
+			height: 16px;
+		}
+	}
+
+	.swiper-container {
+		width: 100%;
+		height: 100%;
+	}
+	.swiper-slide {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.swiper-container-vertical > .swiper-pagination-bullets {
+		right: 20px;
+
+		@include breakpoint(md) {
+			right: 55px;
+		}
+	}
+	
+	.swiper-container-vertical > .swiper-pagination-bullets .swiper-pagination-bullet {
+		margin: 0 0 17px;
+	
+		&:last-of-type {
+			margin-bottom: 0;
+		}
+	}
+}
